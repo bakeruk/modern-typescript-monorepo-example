@@ -1,0 +1,11 @@
+# Generated files
+node_modules
+dist
+*.tsbuildinfo
+*.d.ts
+.turbo
+.DS_Store
+
+# Env files
+.env*
+!.env.example

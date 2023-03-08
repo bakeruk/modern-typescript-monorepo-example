@@ -1,0 +1,19 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "outputs": ["dist/**", "tsconfig.tsbuildinfo"]
+    },
+    "clean:build": {},
+    "dev": {
+      "persistent": true
+    },
+    "lint": {},
+    "lint:fix": {},
+    "format": {},
+    "format:fix": {},
+    "typecheck": {
+      "outputs": ["tsconfig.tsbuildinfo"]
+    }
+  }
+}

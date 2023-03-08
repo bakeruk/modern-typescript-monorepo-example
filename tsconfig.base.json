@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/node-lts-strictest/tsconfig.json",
+  "compilerOptions": {
+    /* Basic Options */
+    "incremental": true,
+    "declaration": true,
+    "allowJs": true,
+    "noEmit": true,
+
+    /* Strict Type-Checking Options */
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "resolveJsonModule": true,
+
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false
+  }
+}

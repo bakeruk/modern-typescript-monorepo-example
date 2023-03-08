@@ -1,0 +1,49 @@
+{
+  "name": "modern-monorepo-example",
+  "version": "0.0.0-development",
+  "description": "An example of a modern Monorepo",
+  "author": "Luke Baker <luke.baker@live.com>",
+  "license": "MIT",
+  "keywords": [
+    "NPM",
+    "package",
+    "monorepo",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakeruk/modern-monorepo-example.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7.5.1"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "turbo run build --parallel",
+    "build:clean": "turbo run clean:build build",
+    "dev": "turbo run dev --parallel",
+    "lint-format": "turbo run lint format --parallel",
+    "lint-format:fix": "turbo run lint:fix format:fix --parallel",
+    "typecheck": "turbo run typecheck --parallel",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts-strictest": "^18.12.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.2",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.3.1",
+    "turbo": "^1.8.3",
+    "typescript": "^4.9.5"
+  }
+}

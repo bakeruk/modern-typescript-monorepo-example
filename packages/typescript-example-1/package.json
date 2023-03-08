@@ -1,0 +1,37 @@
+{
+  "name": "@mme/typescript-example-1",
+  "version": "0.0.0-development",
+  "description": "The first typescript example for the Monorepo example",
+  "author": "Luke Baker <luke.baker@live.com>",
+  "license": "MIT",
+  "keywords": [
+    "monorepo",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakeruk/modern-monorepo-example.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7.5.1"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean:build": "rimraf ./dist",
+    "dev": "nodemon",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@mme/typescript-example-2": "workspace:0.0.0-development"
+  }
+}
