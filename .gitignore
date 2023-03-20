@@ -1,10 +1,18 @@
 # Generated files
 node_modules
 dist
+.DS_Store
+
+# Typescript
 *.tsbuildinfo
 *.d.ts
+
+# Turborepo
 .turbo
-.DS_Store
+
+# Jest
+coverage
+.coverage
 
 # Env files
 .env*

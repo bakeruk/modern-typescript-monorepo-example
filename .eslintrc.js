@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 module.exports = {
   root: true,
   env: { node: true },

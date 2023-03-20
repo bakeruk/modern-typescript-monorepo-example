@@ -1,6 +1,6 @@
 /**
  * World
  */
-export function world() {
-  return "World";
+export function world(override?: string) {
+  return override || "World";
 }

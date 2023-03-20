@@ -29,6 +29,7 @@
     "lint:fix": "pnpm lint --fix",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
+    "test": "jest",
     "typecheck": "tsc"
   },
   "dependencies": {
