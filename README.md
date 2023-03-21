@@ -28,6 +28,7 @@
     - [Nodemon](#nodemon)
     - [Jest](#jest)
     - [GitHub Actions](#github-actions)
+    - [Conventional Commits](#conventional-commits)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
     - [PNPM](#pnpm-1)
@@ -136,6 +137,12 @@ As Typescript does all of the type-checking, there's no requirement to use somet
 A CI/CD workflow automation tool that is built into GitHub. It is a great tool for automating your workflow and can be used to build, test and deploy your codebase.
 
 It is worth pointing out the `.github/workflows/pr.yaml` file. This workflow runs on every `pull_request` and validates the PR title follows the [Conventional Commits](https://www.conventionalcommits.org/) specification.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#### Conventional Commits
+
+A specification for adding human and machine readable meaning to commit messages. It is a great tool for automating your workflow and can be used to build, test and deploy your codebase.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
