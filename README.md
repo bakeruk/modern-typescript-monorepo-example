@@ -6,7 +6,7 @@
   <p>A modern monorepo example using Typescript, PNPM and Turborepo.</p>
 
   <a href="https://github.com/bakeruk/modern-monorepo-example/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/bakeruk/modern-monorepo-example.svg?style=for-the-badge" alt="License" />
+    <img src="https://img.shields.io/github/license/bakeruk/modern-typescript-monorepo-example.svg?style=for-the-badge" alt="License" />
   </a>
   <a href="https://linkedin.com/in/lukebaker87">
     <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn" />
