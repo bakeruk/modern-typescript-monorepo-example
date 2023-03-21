@@ -26,7 +26,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:clean": "turbo run clean:build build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
     "lint-format": "pnpm lint && pnpm format && turbo run lint format --parallel",
     "lint-format:fix": "pnpm lint:fix && pnpm format:fix && turbo run lint:fix format:fix --parallel",
     "lint": "eslint . --ext .js,.ts",

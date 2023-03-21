@@ -1,3 +1,4 @@
+# Yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: PR
 
 on:

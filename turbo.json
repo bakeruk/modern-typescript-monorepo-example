@@ -7,6 +7,7 @@
     },
     "clean:build": {},
     "dev": {
+      "dependsOn": ["^build"],
       "persistent": true
     },
     "lint": {},

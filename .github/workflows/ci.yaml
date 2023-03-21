@@ -1,3 +1,4 @@
+# Yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: CI
 
 on:
@@ -16,7 +17,7 @@ env:
 
 jobs:
   typecheck-and-lint:
-    name: Typecheck and lint
+    name: Type-check and lint packages
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -31,18 +32,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build packages
         run: pnpm build
 
-      - name: Typecheck
+      - name: Typecheck packages
         run: pnpm lint-format
 
   test:
+    name: Test packages
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -57,13 +59,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build packages
         run: pnpm build
 
-      - name: Typecheck
+      - name: Test packages
         run: pnpm test
