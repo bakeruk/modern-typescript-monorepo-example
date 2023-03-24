@@ -16,8 +16,8 @@ env:
   PNPM_VERSION: 7
 
 jobs:
-  typecheck-and-lint:
-    name: Type-check and lint packages
+  lint-and-format:
+    name: Lint and format packages
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -42,6 +42,33 @@ jobs:
 
       - name: Typecheck packages
         run: pnpm lint-format
+
+  typecheck:
+    name: Type-check packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup NodeJS environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Typecheck packages
+        run: pnpm typecheck
 
   test:
     name: Test packages

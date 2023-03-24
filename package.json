@@ -25,16 +25,16 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "turbo run build",
-    "build:clean": "turbo run clean:build build",
+    "build:clean": "turbo run clean:build",
     "dev": "turbo run dev",
-    "lint-format": "pnpm lint && pnpm format && turbo run lint format --parallel",
-    "lint-format:fix": "pnpm lint:fix && pnpm format:fix && turbo run lint:fix format:fix --parallel",
+    "lint-format": "turbo run --parallel lint format ",
+    "lint-format:fix": "turbo run --parallel lint:fix format:fix",
     "lint": "eslint . --ext .js,.ts",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "test": "turbo run test --parallel",
-    "typecheck": "turbo run typecheck --parallel",
+    "test": "turbo run --parallel test",
+    "typecheck": "turbo run --parallel typecheck",
     "prepare": "husky install"
   },
   "devDependencies": {
